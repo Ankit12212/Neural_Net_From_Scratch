@@ -17,7 +17,7 @@ class layer_dense:
     def forward(self, inputs):
         self.output = np.dot(inputs, self.weights) + self.bias
 
-#creates a non-linear spiral dataset
+#creates a non-linear spiral dataset of 100 datapoints divided into 3 classes 
 x, y = spiral_data(100, 3)   
 
 #creates a layer with 2 inputs and 3 neruons
