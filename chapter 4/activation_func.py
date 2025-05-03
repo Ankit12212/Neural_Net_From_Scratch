@@ -26,11 +26,11 @@ x, y = spiral_data(samples=100, classes=3)
 
 
 #for first layer 
-layer1 = dense_layer(2,3)
+layer1 = dense_layer(2,5) #inputs_no = 2 because spiral data is passed to it, and each batch is a 2D data point i.e x, & y coordinate
 act1 = relu_activation()
 
 #for second layer 
-layer2 = dense_layer(3,3)
+layer2 = dense_layer(5,3) #number of neruons in last layer matches the number of classes of input 
 act2 = softmax_softmax()
 
 #spiral_data --> layer1 --> act1 --> layer2 --> act2
