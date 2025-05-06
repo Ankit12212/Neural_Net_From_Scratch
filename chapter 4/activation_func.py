@@ -44,3 +44,9 @@ layer2.forward(act1.output)
 act2.forward(layer2.output)
 
 print(act2.output[:5])
+
+
+# This completes the forward passing in our model.
+# We used the Rectified Linear (ReLU) activation function on the hidden layer, which works on a per-neuron basis. We additionally used the Softmax activation function for the output layer since it accepts non-normalized values as input and outputs a probability distribution which we’re using as confidence scores for each class. Recall that, although neurons are interconnected, they each have their respective weights and biases and are not “normalized” with each other.
+
+# our next step is to quantify how wrong the model is through what’s defined as a loss function.
